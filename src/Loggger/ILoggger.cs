@@ -1,6 +1,6 @@
 using System;
 
-namespace Madscience.Logging
+namespace Madscience.Loggger
 {
     public interface ILoggger : IDisposable
     {
