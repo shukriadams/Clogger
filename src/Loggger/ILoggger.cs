@@ -18,7 +18,7 @@ namespace Madscience.Logging
 
         void Warn(object source, object exception);
 
-        void Warn(string source, string message, object exception);
+        void Warn(object source, string message, object exception);
 
         void Status(object source, string message, int verbosity = 0);
 
