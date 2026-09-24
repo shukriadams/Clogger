@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Timers;
 
-namespace Madscience.Logging
+namespace Madscience.Loggger
 {
     /// <summary>
     /// A non-sucking log for the real world, designed to get around the stupid conventions that plague
@@ -172,18 +172,18 @@ namespace Madscience.Logging
 
         public void Warn(object source, string message) 
         {
-            Warn(GetTypeName(source), message, null);
+            Warn(source, message, null);
         }
 
         public void Warn(object source, object exception) 
         {
-            Warn(GetTypeName(source), null, exception);
+            Warn(source, null, exception);
         }
 
         /// <summary>
         /// A bad thing that you're going to put off until it turns up in Error. Cannot be disabled.
         /// </summary>
-        public void Warn(string source, string message, object exception)
+        public void Warn(object sourceContext, string message, object exception)
         {
             // strip out curly braces from messages, these will break console out on C#
             if (message != null)
@@ -191,6 +191,7 @@ namespace Madscience.Logging
                     .Replace("{", " ")
                     .Replace("}", " ");
 
+            string source = this.GetTypeName(sourceContext);
             if (!string.IsNullOrEmpty(source))
                 source = $" |Src:{source}";
 
