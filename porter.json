@@ -1,6 +1,6 @@
 {
     "name" : "Madscience.Logging",
-    "export" : "src/Clogger",
+    "export" : "src/Loggger",
     "runtimes" : [ 6 ],
     "author" : "Shukri Adams <mail@shukriadams.com",
     "license": "MIT",
