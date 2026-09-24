@@ -1,4 +1,4 @@
-namespace Madscience.Logging
+namespace Madscience.Loggger
 {
     public enum LogLevel
     {
