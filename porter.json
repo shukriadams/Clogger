@@ -1,0 +1,8 @@
+{
+    "name" : "Madscience.Logging",
+    "export" : "src/Clogger",
+    "runtimes" : [ 6 ],
+    "author" : "Shukri Adams <mail@shukriadams.com",
+    "license": "MIT",
+    "description": "Log to console and file"
+}
